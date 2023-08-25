@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/pic_bg_fast_read_game">
+
+        <com.example.fastreaddemo.widget.CustomGridView
+            android:id="@+id/custom_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1A1D38"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="10dp"/>
+        
+        <TextView
+            android:id="@+id/tv_game_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/custom_grid_view"
+            app:layout_constraintStart_toStartOf="@id/custom_grid_view"
+            app:layout_constraintEnd_toEndOf="@id/custom_grid_view"
+            android:layout_marginTop="25dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="按顺序点击：xxxxx"/>
+
+        <TextView
+            android:id="@+id/tv_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="0s"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/pic_bg_fast_read_game">
+
+        <TextView
+            android:id="@+id/tv_target_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/tv_again"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:text="再看一次"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="@id/tv_target_text"
+            app:layout_constraintBottom_toBottomOf="@id/tv_target_text"
+            app:layout_constraintStart_toStartOf="@id/tv_target_text"
+            app:layout_constraintEnd_toEndOf="@id/tv_target_text"
+            android:background="@drawable/shape_ffc339_r18"/>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_target_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="出现的符句子是："/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:text="下一题"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:textSize="13sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintTop_toBottomOf="@id/rv_option"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/shape_4a98ff_r18"/>
+
+
+        <TextView
+            android:id="@+id/tv_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="0s"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
