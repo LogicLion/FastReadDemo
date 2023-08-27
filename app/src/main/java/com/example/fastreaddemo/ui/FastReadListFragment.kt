@@ -54,7 +54,7 @@ class FastReadListFragment : DataBindingFragment() {
         binding.rv.layoutManager = LinearLayoutManager(requireActivity())
 
 
-        for (i in 1..28) {
+        for (i in 1..29) {
             val fastReadType = matchGameType(i)
             fastReadType?.let { typeList.add(it) }
         }

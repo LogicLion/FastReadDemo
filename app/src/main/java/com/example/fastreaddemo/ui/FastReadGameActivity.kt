@@ -78,7 +78,9 @@ class FastReadGameActivity : DataBindingActivity() {
             FastReadType.NUMBER_FLASH -> NumberFlashFragment()
             FastReadType.SKIP_READ_TRAIN -> SkipReadTrainFragment()
             FastReadType.SENTENCE_FLASH -> SentenceFlashFragment()
-            FastReadType.PICTURE_FLASH->PictureFlashFragment()
+            FastReadType.PICTURE_FLASH -> PictureFlashFragment()
+            FastReadType.TEN_LINE_READ -> TenLineReadFragment()
+            FastReadType.ARTICLE_PART_READ -> ArticlePartStepReadFragment()
             else -> throw Exception("参数错误")
         }
     }
